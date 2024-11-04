@@ -1,10 +1,10 @@
-from task import Task
+from models.task import Task
 class Project:
     def __init__(self, name):
         self.name = name
         self.tasks = {}
         
-    def add_task_to_project (self, task):
+    def add_task (self, task):
         if isinstance(task, Task):
             self.tasks[task.task_id]=task
         else:
@@ -23,6 +23,6 @@ class Project:
         if not self.tasks:
             print("No tasks available in this project.")
         else:
-            for task in self.tasks:
-                print(f"ID: {task.id}, Name: {task.name}, Status: {'Done' if task.done else 'Not Done'}")
+            for task_id, task in self.tasks.items():
+                print(f"ID: {task_id}, Name: {task.name}, Status: {'Done' if task.status else 'Not Done'}")
 
