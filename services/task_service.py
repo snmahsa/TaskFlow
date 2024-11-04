@@ -10,6 +10,16 @@ def add_task(project_name, task_name, description):
         project.add_task(task)
         print(f"Task '{task_name}' added to project '{project_name}'.")
 
+def remove_task(project_name, task_id):
+    project = get_project(project_name)
+    if not project:
+        print(f"Project '{project_name}' does not exist.")
+    else:
+        if project.remove_task(task_id):
+            print(f"Task with ID '{task_id}' removed from project '{project_name}'.")
+        else:
+            print(f"Task with ID '{task_id}' not found in project '{project_name}'.")
+
 def mark_task_done(project_name, task_id, start_time, end_time):
     project = get_project(project_name)
     if not project:
