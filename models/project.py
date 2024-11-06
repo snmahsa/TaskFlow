@@ -18,15 +18,22 @@ class Project:
             return self.tasks[task_id]
         else:
             return None
-        
+
+    def check_task(self,task_id):
+        if self.tasks[task_id]:
+            return True
+        else:
+            return None
+      
+
     def list_tasks(self):
         if not self.tasks:
             print("No tasks available in this project.")
         else:
             for task_id, task in self.tasks.items():
-                print(f"ID: {task_id}, Name: {task.name}, Status: {'Done' if task.status else 'Not Done'}", end=' ')
+                print(f"ID: {task_id}, Name: {task.name}, Status: {'Done' if task.status else 'Not Done'}\n", end=' ')
             if task.status:
                 print(f", Duration: {task.duration}")
                 print(f", Start time: {task.start_time}")
-                print(f", End time: {task.end_time}")
+                print(f", End time: {task.end_time}\n")
 
