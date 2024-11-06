@@ -15,7 +15,8 @@ def remove_task(project_name, task_id):
     if not project:
         print(f"Project '{project_name}' does not exist.")
     else:
-        if project.remove_task(task_id):
+        if project.check_task(task_id):
+            project.remove_task(task_id)
             print(f"Task with ID '{task_id}' removed from project '{project_name}'.")
         else:
             print(f"Task with ID '{task_id}' not found in project '{project_name}'.")
