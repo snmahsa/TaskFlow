@@ -38,4 +38,18 @@ def display_tasks(project_name):
     if not project:
         print(f"Project '{project_name}' does not exist.")
     else:
-        project.list_tasks()
+        project.listـofـtasksـdetails()
+
+def search_task(project_name, task_name):
+    project = get_project(project_name)
+    if not project_name:
+        print(f"Project '{project_name}' does not exist.")
+    else:
+        tasks = project.list_tasks()
+        for task_id , task in tasks.items():
+            if task.name == task_name:
+                print(f"ID: {task_id}, Name: {task.name}, Status: {'Done' if task.status else 'Not Done'}\n", end=' ')
+                if task.status:
+                    print(f", Duration: {task.duration}")
+                    print(f", Start time: {task.start_time}")
+                    print(f", End time: {task.end_time}\n")
