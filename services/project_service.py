@@ -19,3 +19,6 @@ def display_projects():
 def get_project(name):
     return projects.get(name, None)
 
+def get_all_project():
+    return projects
+
