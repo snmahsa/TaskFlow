@@ -32,10 +32,10 @@ class Project:
         else:
             for task_id, task in self.tasks.items():
                 print(f"ID: {task_id}, Name: {task.name}, Status: {'Done' if task.status else 'Not Done'}\n", end=' ')
-            if task.status:
-                print(f", Duration: {task.duration}")
-                print(f", Start time: {task.start_time}")
-                print(f", End time: {task.end_time}\n")
+                if task.status:
+                    print(f", Duration: {task.duration}")
+                    print(f", Start time: {task.start_time}")
+                    print(f", End time: {task.end_time}\n")
     
     def list_tasks(self):
-        return self.tasks 
+        return self.tasks.values() 
