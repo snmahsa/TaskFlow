@@ -1,5 +1,5 @@
 from services.project_service import add_project, display_projects
-from services.task_service import add_task,remove_task, mark_task_done, display_tasks
+from services.task_service import add_task,remove_task, mark_task_done, display_tasks, search_task
 import time
 def main_menu():
     while True:
@@ -10,7 +10,8 @@ def main_menu():
         print("4. Mark Task as Done")
         print("5. Display Tasks")
         print("6. Display All Projects")
-        print("7. Exit")
+        print("7. Search Task With Name in Selected Project")
+        print("8. Exit")
 
         choice = input(">>>Select an option: ")
         
@@ -47,6 +48,10 @@ def main_menu():
             display_projects()
         
         elif choice == "7":
+            project_name = input(">>>Enter project name: ")
+            task_name = input(">>>Enter task name: ")
+            search_task(project_name, task_name)
+        elif choice == "8":
             print("Exiting program.")
             break
         
