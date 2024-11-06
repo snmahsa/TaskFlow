@@ -26,7 +26,7 @@ class Project:
             return None
       
 
-    def list_tasks(self):
+    def listـofـtasksـdetails(self):
         if not self.tasks:
             print("No tasks available in this project.")
         else:
@@ -36,4 +36,6 @@ class Project:
                 print(f", Duration: {task.duration}")
                 print(f", Start time: {task.start_time}")
                 print(f", End time: {task.end_time}\n")
-
+    
+    def list_tasks(self):
+        return self.tasks 
