@@ -1,5 +1,5 @@
 from services.project_service import add_project, display_projects
-from services.task_service import add_task,remove_task, mark_task_done, display_tasks, search_task
+from services.task_service import add_task,remove_task, mark_task_done,display_tasks, search_task,chart_task_durations, plot_task_durations_for_all_projects
 import time
 def main_menu():
     while True:
@@ -11,7 +11,9 @@ def main_menu():
         print("5. Display Tasks")
         print("6. Display All Projects")
         print("7. Search Task With Name in Selected Project")
-        print("8. Exit")
+        print("8. Generate a bar chart for the durations of tasks in a specific project")
+        print("9. Generate a bar chart for the durations of tasks across all projects")
+        print("10. Exit")
 
         choice = input(">>>Select an option: ")
         
@@ -34,6 +36,7 @@ def main_menu():
 
         elif choice == "4":
             project_name = input(">>>Enter project name: ")
+            print("Tasks :")
             display_tasks(project_name)
             task_id = input(">>>Enter task ID: ")
             start_time = input(">>>Enter start time (HH:MM): ")
@@ -51,10 +54,17 @@ def main_menu():
             project_name = input(">>>Enter project name: ")
             task_name = input(">>>Enter task name: ")
             search_task(project_name, task_name)
+        
         elif choice == "8":
+            project_name = input(">>>Enter project name for draw chart: ")
+            chart_task_durations(project_name)
+
+        elif choice == "9":
+            plot_task_durations_for_all_projects()
+
+        elif choice == "10":
             print("Exiting program.")
             break
-        
         else:
             print("Invalid choice. Please try again.")
 
