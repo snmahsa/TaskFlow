@@ -18,8 +18,7 @@ def display_projects():
 
 def get_project(name):
     return projects.get(name, None)
-# project_service.py
-from models.project import Project
+
 
 projects = {}
 
