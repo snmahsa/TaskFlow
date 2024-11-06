@@ -18,6 +18,6 @@ class Task:
         self.duration = (self.end_time - self.start_time).total_seconds() / 3600
         
     def __str__(self):
-        return f"Task(ID:{self.id}, Name:{self.name},Status:{'Done' if self.status==True else 'Not Done'},Duration:{self.duration:.2f} hours)"
+        return f"Task(ID:{self.id}, Name:{self.name},Status:{'Done' if self.status==True else 'Not Done'},Duration:{self.duration:.2f} hours)\n"
 
             
