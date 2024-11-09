@@ -1,5 +1,5 @@
 from models.project import Project
-
+from services.storage_service import save_data, load_data
 projects = {}
 
 def add_project(name):
@@ -22,3 +22,8 @@ def get_project(name):
 def get_all_project():
     return projects
 
+def save_projects():
+    save_data(projects)
+
+def load_projects():
+    load_data(projects)
