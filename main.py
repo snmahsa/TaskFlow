@@ -1,4 +1,4 @@
-from services.project_service import add_project, display_projects
+from services.project_service import add_project, display_projects, save_projects, load_projects
 from services.task_service import add_task,remove_task, mark_task_done,display_tasks, search_task,chart_task_durations, plot_task_durations_for_all_projects
 import time
 def main_menu():
@@ -13,7 +13,9 @@ def main_menu():
         print("7. Search Task With Name in Selected Project")
         print("8. Generate a bar chart for the durations of tasks in a specific project")
         print("9. Generate a bar chart for the durations of tasks across all projects")
-        print("10. Exit")
+        print("10. Save All Projects")
+        print("11. Load csv Projects")
+        print("0. Exit")
 
         choice = input(">>>Select an option: ")
         
@@ -63,6 +65,11 @@ def main_menu():
             plot_task_durations_for_all_projects()
 
         elif choice == "10":
+            save_projects()
+
+        elif choice == "11":
+            load_projects()            
+        elif choice == "0":
             print("Exiting program.")
             break
         else:
