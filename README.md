@@ -43,8 +43,11 @@ python3 main.py
 
 For a step-by-step guide on how to use this project, please watch the following video tutorial:
 
-[Watch the Video Tutorial](https://github.com/snmahsa/myrep/blob/main/TaskFlow_1.mp4)
-
+Watch the Video Tutorial
+<video width="600" controls>
+  <source src="https://github.com/snmahsa/myrep/blob/main/TaskFlow_1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Contributing
 
