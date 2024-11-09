@@ -44,10 +44,7 @@ python3 main.py
 For a step-by-step guide on how to use this project, please watch the following video tutorial:
 
 Watch the Video Tutorial
-<video width="600" controls>
-  <source src="https://biaupload.com/do.php?filename=org-e44ceb4e1a831.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the Video Tutorial](https://biaupload.com/do.php?filename=org-e44ceb4e1a831.mp4)
 
 ## Contributing
 
